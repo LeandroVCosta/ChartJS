@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Integrando o ChartJS</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+        <div class="grafico" style="position: relative; height:40vh; width:40vw">
+            <canvas id="myChart"></canvas>
+          </div>
+        <div class="grafico" style="margin-top: 20px; position: relative; height:40vh; width:40vw">
+            <canvas id="myChart2"></canvas>
+          </div>
+</body>
+<script>
+    const labels = [
+      '17:00',
+      '18:00',
+      '19:00',
+      '20:00',
+      '21:00',
+      '22:00',
+      '23:00',
+      '00:00',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Temperatura do Milho',
+        backgroundColor: 'rgb(255, 255, 0)',
+        borderColor: 'rgb(255, 165, 0)',
+        data: [24, 25, 25, 24, 25, 23, 27, 30],
+      }]
+    };
+    const data2 = {
+      labels: labels,
+      datasets: [{
+        label: 'Umidade do Milho',
+        backgroundColor: 'rgb(255, 255, 0)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [35, 28, 30, 31, 30, 28, 30, 31],
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+
+    const config2 = {
+      type: 'line',
+      data: data2,
+      options: {}
+    };
+
+    
+  </script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+  </script>
+</html>

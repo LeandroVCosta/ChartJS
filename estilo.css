@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.grafico {
+    border: 05px solid;
+    border-radius: 10px;
+    border-bottom: 0px;
+    }
